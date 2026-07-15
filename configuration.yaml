@@ -1,0 +1,17 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  timezone: Asia/Shanghai
+  customize: !include customize.yaml
+
+button_card_templates: !include templates/button_card_templates.yaml
+
+card_mod: !include card_mod.yaml
+
+lovelace:
+  mode: yaml
+  resources: !include lovelace/resources.yaml
+  views: !include_dir_list views/

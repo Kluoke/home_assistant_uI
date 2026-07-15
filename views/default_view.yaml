@@ -1,0 +1,135 @@
+- path: default_view
+  title: Home
+  cards:
+    - type: custom:layout-card
+      layout_type: custom:grid-layout
+      layout:
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 12px
+      cards:
+        - type: custom:button-card
+          template: apple_home
+          entity: light.zbeacon_ts0013_deng_guang
+          name: 彩灯
+          icon: mdi:ceiling-light
+        - type: custom:button-card
+          template: apple_home
+          entity: light.zbeacon_ts0012_deng_guang_2
+          name: 大灯
+          icon: mdi:lightbulb
+        - type: custom:button-card
+          template: apple_home
+          entity: light.zbeacon_ts0013_deng_guang_2
+          name: 第二组
+          icon: mdi:lightbulb
+        - type: custom:button-card
+          template: apple_home
+          entity: light.zbeacon_ts0013_deng_guang_3
+          name: 第一组
+          icon: mdi:lightbulb
+        - type: custom:button-card
+          template: apple_home
+          entity: light.zbeacon_ts0012_deng_guang
+          name: 走廊灯
+          icon: mdi:wall-sconce
+        - type: custom:button-card
+          template: apple_home
+          entity: light.chu_fang
+          name: 厨房灯
+          icon: mdi:wall-sconce
+    - type: custom:layout-card
+      layout_type: custom:grid-layout
+      layout:
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 12px
+      cards:
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2051205043360759810_ir01_turn_on_a_2_5
+          name: 电视
+          icon: mdi:television-classic
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2071109593609945088_ir01_turn_on_a_2_4
+          name: 风扇开
+          icon: mdi:fan
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2071109593609945088_ir01_turn_off_a_2_3
+          name: 风扇关
+          icon: mdi:fan-off
+        - type: custom:button-card
+          template: apple_ir
+          entity: >-
+            button.miir_cn_ir_2071109593609945088_ir01_horizontal_swing_off_a_2_5
+          name: 风扇摇头
+          icon: mdi:arrow-left-right-bold
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2076274288746455041_ir02_turn_on_a_2_6
+          name: 空调开
+          icon: mdi:air-conditioner
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2076274288746455041_ir02_turn_off_a_2_5
+          name: 空调关
+          icon: mdi:air-conditioner
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2076274288746455041_ir02_temperature_up_a_2_4
+          name: 温度加
+          icon: mdi:air-conditioner
+        - type: custom:button-card
+          template: apple_ir
+          entity: button.miir_cn_ir_2076274288746455041_ir02_temperature_down_a_2_3
+          name: 温度减
+          icon: mdi:air-conditioner
+    - square: false
+      type: grid
+      columns: 2
+      cards:
+        - type: custom:button-card
+          template: apple_contact
+          entity: binary_sensor.zbeacon_ds01
+          name: 大门
+          icon: mdi:door
+          state:
+            - value: 'on'
+              name: 门打开
+            - value: 'off'
+              name: 门关闭
+        - type: custom:button-card
+          template: apple_contact
+          entity: binary_sensor.zbeacon_ds01_2
+          name: 卧室门
+          icon: mdi:door
+          state:
+            - value: 'on'
+              name: 门打开
+            - value: 'off'
+              name: 门关闭
+    - type: grid
+      square: true
+      columns: 3
+      cards:
+        - type: picture-entity
+          entity: person.changshengke
+          aspect_ratio: '1'
+          show_name: false
+          image: >-
+            data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' style='background-color:%23b3e5fc'%3E%3Cg%3E%3Ctext font-family='roboto' x='50%25' y='50%25' text-anchor='middle' stroke='%23212121' font-size='1.3em' dy='.3em'%3EC%3C/text%3E%3C/g%3E%3C/svg%3E
+        - type: picture-entity
+          entity: person.yuguoke
+          aspect_ratio: '1'
+          show_name: false
+          image: >-
+            data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' style='background-color:%23b3e5fc'%3E%3Cg%3E%3Ctext font-family='roboto' x='50%25' y='50%25' text-anchor='middle' stroke='%23212121' font-size='1.3em' dy='.3em'%3EY%3C/text%3E%3C/g%3E%3C/svg%3E
+        - type: picture-entity
+          entity: person.weimingwang
+          aspect_ratio: '1'
+          show_name: false
+          image: >-
+            data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' width='50' height='50' style='background-color:%23b3e5fc'%3E%3Cg%3E%3Ctext font-family='roboto' x='50%25' y='50%25' text-anchor='middle' stroke='%23212121' font-size='1.3em' dy='.3em'%3EW%3C/text%3E%3C/g%3E%3C/svg%3E
+    - type: weather-forecast
+      entity: weather.forecast_wo_de_jia
+      show_forecast: false

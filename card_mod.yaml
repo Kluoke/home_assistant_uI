@@ -1,0 +1,11 @@
+card_mod:
+  style: |
+    hui-view {
+      background: linear-gradient(
+        135deg,
+        #dbefff,
+        #f5f7ff,
+        #ffffff
+      ) !important;
+      background-attachment: fixed;
+    }
