@@ -1,5 +1,4 @@
-card_mod:
-  style: |
+style: |
     hui-view {
       background: linear-gradient(
         135deg,
